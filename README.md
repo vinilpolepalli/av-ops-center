@@ -1,5 +1,7 @@
 # AV Ops Center
 
+**GitHub:** https://github.com/vinilpolepalli/av-ops-center
+
 Dark-mode AV operations dashboard with role-based access control (RBAC). Connects two simulated spreadsheet data sources — AV Equipment Inventory and Staff Shift Schedules — into a unified interface.
 
 ## Setup
