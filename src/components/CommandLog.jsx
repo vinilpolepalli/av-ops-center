@@ -16,12 +16,12 @@ export default function CommandLog({ log, onViewPayload }) {
               </span>
               <span className="text-primary font-medium truncate">{entry.device}</span>
               <span className="text-secondary font-mono text-xs">{entry.command}</span>
-              <div
+              <button
                 onClick={() => onViewPayload(entry.payload)}
                 className="ml-auto text-accent text-xs underline-offset-2 hover:underline cursor-pointer whitespace-nowrap"
               >
                 View Payload
-              </div>
+              </button>
             </div>
           ))}
         </div>

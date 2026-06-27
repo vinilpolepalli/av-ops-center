@@ -62,12 +62,12 @@ export default function LoginScreen({ onLogin }) {
             <p className="text-sm text-offline">{error}</p>
           )}
 
-          <div
+          <button
             onClick={handleSubmit}
-            className="w-full py-2.5 rounded-lg bg-accent hover:bg-blue-600 text-white font-semibold text-sm text-center cursor-pointer transition-colors"
+            className="w-full py-2.5 rounded-lg bg-accent hover:bg-blue-600 text-white font-semibold text-sm cursor-pointer transition-colors"
           >
             Sign In
-          </div>
+          </button>
         </div>
       </div>
     </div>

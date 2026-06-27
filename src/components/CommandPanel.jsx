@@ -73,9 +73,12 @@ export default function CommandPanel({ inventory, user, onCommandTriggered }) {
 
   const handleCopy = () => {
     if (!currentPayload) return;
-    navigator.clipboard.writeText(JSON.stringify(currentPayload, null, 2));
-    setCopySuccess(true);
-    setTimeout(() => setCopySuccess(false), 2000);
+    navigator.clipboard.writeText(JSON.stringify(currentPayload, null, 2))
+      .then(() => {
+        setCopySuccess(true);
+        setTimeout(() => setCopySuccess(false), 2000);
+      })
+      .catch(() => {});
   };
 
   return (

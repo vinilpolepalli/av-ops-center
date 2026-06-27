@@ -11,9 +11,12 @@ export default function PayloadModal({ payload, onClose }) {
   }, [onClose]);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(json);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    navigator.clipboard.writeText(json)
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      })
+      .catch(() => {});
   };
 
   return (
@@ -27,12 +30,12 @@ export default function PayloadModal({ payload, onClose }) {
       >
         <div className="flex items-center justify-between">
           <h2 className="text-base font-semibold text-primary">Command Payload</h2>
-          <div
+          <button
             onClick={onClose}
             className="text-secondary hover:text-primary cursor-pointer text-sm"
           >
             ✕ Close
-          </div>
+          </button>
         </div>
 
         <pre
